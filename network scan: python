@@ -4,6 +4,11 @@ TCP scan (lower privileges)
 __Installations that need to be made__
 Kali Linux commands
 1. sudo apt-get install ufw 
+    (to check the firewall status)
+    sudo ufw status (kali linux command)
+Status: inactive (resulting in no active firewall blockage)
+Status: active (resulting in an active firewall blockage and further investigation is needed)
+__Another way to remediate this is to add the -Pn option within the python nmap script in order to ignore the online status of the target.__
 
 ***CODE STARTS HERE***
 
