@@ -3,7 +3,7 @@ TCP scan (lower privileges)
 
 __Installations that need to be made__
 Kali Linux commands
-1. sudo apt-get install ufw 
+    sudo apt-get install ufw 
     (to check the firewall status)
     sudo ufw status (kali linux command)
 Status: inactive (resulting in no active firewall blockage)
