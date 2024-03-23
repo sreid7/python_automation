@@ -1,0 +1,25 @@
+--Python Network Scan Using NMAP--
+
+import nmap
+
+def scan_network(ip_address):
+    nm = nmap.PortScanner()
+    nm.scan(hosts=ip_address, arguments='-sS -p 1-65535')  # Scan all ports
+
+    for host in nm.all_hosts():
+        print('----------------------------------------------------')
+        print(f'Host : {host} ({nm[host].hostname()})')
+        print('State :', nm[host].state())
+
+        for proto in nm[host].all_protocols():
+            print('----------')
+            print(f'Protocol : {proto}')
+
+            lport = nm[host][proto].keys()
+            sorted(lport)
+            for port in lport:
+                print(f'port : {port}\tstate : {nm[host][proto][port]["state"]}')
+
+if __name__ == '__main__':
+    ip_address = 'test ip address here'
+    scan_network(ip_address)
