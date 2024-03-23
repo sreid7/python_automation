@@ -1,27 +1,30 @@
 --Python Network Scan Using NMAP--
 TCP scan (lower privileges)
 
-import nmap
+import subprocess
 
-def scan_network(ip_address):
-    nm = nmap.PortScanner()
-    nm.scan(hosts=ip_address, arguments='-sT -p 1-65535')  # TCP connect scan, Scan all ports
+def scan_network(ip_address, output_file):
+    with open(output_file, 'w') as f:
+        f.write("Starting network scan...\n")
+        
+        # Execute Nmap command with -Pn option to skip host discovery
+        nmap_cmd = ['nmap', '-sT', '-Pn', '-p', '1-65535', ip_address]
+        process = subprocess.Popen(nmap_cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
 
-    for host in nm.all_hosts():
-        print('----------------------------------------------------')
-        print(f'Host : {host} ({nm[host].hostname()})')
-        print('State :', nm[host].state())
+        # Capture and write Nmap output to the file
+        stdout, stderr = process.communicate()
+        f.write(stdout)
 
-        for proto in nm[host].all_protocols():
-            print('----------')
-            print(f'Protocol : {proto}')
-
-            lport = nm[host][proto].keys()
-            sorted(lport)
-            for port in lport:
-                print(f'port : {port}\tstate : {nm[host][proto][port]["state"]}')
+        # Check for errors
+        if stderr:
+            f.write(f"Error occurred: {stderr}\n")
+        else:
+            f.write("Scan completed.\n")
 
 if __name__ == '__main__':
-    ip_address = 'insert IP adress HERE for target system'
-    scan_network(ip_address)
+    ip_address = '10.0.3.15'
+    output_file = 'scan_results.txt'
+    print(f"Scanning network {ip_address}...")
+    scan_network(ip_address, output_file)
+    print(f"Scan results written to {output_file}")
 
