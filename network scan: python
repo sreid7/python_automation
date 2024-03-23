@@ -1,6 +1,12 @@
 --Python Network Scan Using NMAP--
 TCP scan (lower privileges)
 
+__Installations that need to be made__
+Kali Linux commands
+1. sudo apt-get install ufw 
+
+***CODE STARTS HERE***
+
 import subprocess
 
 def scan_network(ip_address, output_file):
