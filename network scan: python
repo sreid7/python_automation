@@ -1,10 +1,11 @@
 --Python Network Scan Using NMAP--
+TCP SYN scan (lower privileges)
 
 import nmap
 
 def scan_network(ip_address):
     nm = nmap.PortScanner()
-    nm.scan(hosts=ip_address, arguments='-sS -p 1-65535')  # Scan all ports
+    nm.scan(hosts=ip_address, arguments='-sS -p 1-65535')  # SYN scan, Scan all ports
 
     for host in nm.all_hosts():
         print('----------------------------------------------------')
@@ -21,5 +22,5 @@ def scan_network(ip_address):
                 print(f'port : {port}\tstate : {nm[host][proto][port]["state"]}')
 
 if __name__ == '__main__':
-    ip_address = 'test ip address here'
+    ip_address = 'insert ip address HERE of the test machine'
     scan_network(ip_address)
