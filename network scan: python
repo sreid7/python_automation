@@ -22,7 +22,7 @@ def scan_network(ip_address, output_file):
             f.write("Scan completed.\n")
 
 if __name__ == '__main__':
-    ip_address = '10.0.3.15'
+    ip_address = 'ENTER TARGETED IP ADDRESS HERE'
     output_file = 'scan_results.txt'
     print(f"Scanning network {ip_address}...")
     scan_network(ip_address, output_file)
