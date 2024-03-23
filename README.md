@@ -1,5 +1,5 @@
 # python_automation_kali_linux
-Python scripting within the Kali Linux environment to automate common cybersecurity tasks, such as network scanning, vulnerability assessment, and penetration testing.
+Python scripting within the Kali Linux environment to automate common preliminary cybersecurity task, such as a network scan - preliminary penetration test.
 
 
 1. Initiating Parallel DNS Resolution: This indicates that Nmap is resolving the DNS of the target system.
