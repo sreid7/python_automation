@@ -14,7 +14,7 @@ After I have explicit permission and proper authorization, I can incorporate tec
 such as adjusting timing options, using proxy chains, or leveraging VPNs.
 
 
-***CODE STARTS HERE***
+***CODE STARTS HERE*** (Python Code automatically uploads and saves scanned port results in a text file)
 
 import subprocess
 
