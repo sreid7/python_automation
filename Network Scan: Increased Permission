@@ -5,4 +5,5 @@
 
 --ping -c 4 (PLACE TARGET"S IP ADDRESS HERE) (This command is to test the ICMP connection by sending 4 ICMP echo requests to the target machine).
 
+**BEST WAY TO GAIN ACCESS TO ANY SYSTEM WITH CREDENTIALED PERMISSIONS WOULD BE TO USE SSH. After that a proper scan can take place.**
 
