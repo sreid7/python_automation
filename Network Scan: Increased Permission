@@ -1,2 +1,8 @@
 **Increase in privilege: Allowing ICMP to and from**
 
+--First use // sudo ufw enable // enter machine password: Message: Firewall is active and enabled on system startup
+--sudo ufw allow from (PLACE ATTACKERS IP ADDRESS HERE) to any /// (Allowing ICMP traffic from the IP address of the attacker)
+
+--ping -c 4 (PLACE TARGET"S IP ADDRESS HERE) (This command is to test the ICMP connection by sending 4 ICMP echo requests to the target machine).
+
+
