@@ -19,7 +19,7 @@ sudo systemctl status ssh
 ssh username@target_ip_address
 
 
-**PYTHON AUTOMATION: STARTS HERE**
+**PYTHON AUTOMATION: STARTS HERE** (Scanned the most common ports)
 
 import subprocess
 
