@@ -13,7 +13,6 @@ __Below is a python automation script that is a preliminary research scan aimed 
 After I have explicit permission and proper authorization, I can incorporate techniques for bypassing firewalls, 
 such as adjusting timing options, using proxy chains, or leveraging VPNs.
 
-
 ***CODE STARTS HERE*** (Python Code automatically uploads and saves scanned port results in a text file)
 
 import subprocess
